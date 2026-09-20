@@ -6,14 +6,11 @@
 	Built with <a href="https://gohugo.io">Hugo</a> | 
     {{ .Site.Params.description | safeHTML }}  
 </footer>
-{{ if not .Site.IsServer }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
+{{ template "_internal/google_analytics.html" . }}
 
 {{- if (isset .Site.Params "social") -}}
 <script>
       feather.replace()
 </script>
 {{- end }}
-
 
